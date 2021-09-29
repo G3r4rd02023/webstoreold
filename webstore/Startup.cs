@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using webstore.Data;
+using webstore.Helpers;
 
 namespace webstore
 {
@@ -30,6 +31,8 @@ namespace webstore
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             services.AddControllersWithViews();
+            services.AddScoped<IImageHelper, ImageHelper>();
+            services.AddScoped<IConverterHelper, ConverterHelper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
