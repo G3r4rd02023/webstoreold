@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using webstore.Data.Entities;
 
 namespace webstore.Data
 {
@@ -15,6 +16,7 @@ namespace webstore.Data
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Name { get; set; }
 
-       
+        public ICollection<User> Users { get; set; }
+
     }
 }

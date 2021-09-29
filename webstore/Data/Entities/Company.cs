@@ -25,7 +25,10 @@ namespace webstore.Data.Entities
         //? "https://soccerweb.azurewebsites.net//images/noimage.png"
         //: $"https://soccerweb.azurewebsites.net{LogoPath.Substring(1)}";
 
+        public Owner Owner { get; set; }
+
         public ICollection<Product> Products { get; set; }
 
+        public ICollection<CompanyCustomer> CompanyCustomers { get; set; }
     }
 }

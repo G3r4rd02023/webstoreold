@@ -42,6 +42,8 @@ namespace webstore.Data.Entities
 
         public ICollection<ProductImage> ProductImages { get; set; }
 
+        public ICollection<OrderDetail> Items { get; set; }
+
         [DisplayName("#Imagenes")]
         public int ProductImagesNumber => ProductImages == null ? 0 : ProductImages.Count;
 
