@@ -30,6 +30,7 @@ namespace webstore
             {
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddTransient<SeedDb>();
             services.AddControllersWithViews();
             services.AddScoped<IImageHelper, ImageHelper>();
             services.AddScoped<IConverterHelper, ConverterHelper>();
