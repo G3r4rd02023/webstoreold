@@ -18,6 +18,26 @@ namespace webstore.Helpers
             
         }
 
+        public Category ToCategory(CategoryViewModel model, string path, bool isNew)
+        {
+            return new Category
+            {
+                Id = isNew ? 0 : model.Id,
+                LogoPath = path,
+                Name = model.Name
+            };
+        }
+
+        public CategoryViewModel ToCategoryViewModel(Category category)
+        {
+            return new CategoryViewModel
+            {
+                Id = category.Id,
+                LogoPath = category.LogoPath,
+                Name = category.Name
+            };
+        }
+
         public Company ToCompany(CompanyViewModel model, string path, bool isNew)
         {
             return new Company

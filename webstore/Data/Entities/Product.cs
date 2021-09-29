@@ -26,7 +26,7 @@ namespace webstore.Data.Entities
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public decimal Price { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:C2}")]        
+        [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public decimal Stock { get; set; }
 
@@ -47,7 +47,7 @@ namespace webstore.Data.Entities
 
         [Display(Name = "Foto")]
         public string ImageFullPath => ProductImages == null || ProductImages.Count == 0
-            ? $"https://localhost:44345/images/noimage.png"
+            ? $"https://localhost:44379/images/noimage.png"
             : ProductImages.FirstOrDefault().ImageFullPath;
     }
 }

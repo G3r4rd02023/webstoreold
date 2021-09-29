@@ -12,5 +12,9 @@ namespace webstore.Helpers
         Company ToCompany(CompanyViewModel model, string path, bool isNew);
 
         CompanyViewModel ToCompanyViewModel(Company company);
+
+        Category ToCategory(CategoryViewModel model, string path, bool isNew);
+
+        CategoryViewModel ToCategoryViewModel(Category category);
     }
 }
